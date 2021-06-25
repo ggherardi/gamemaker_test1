@@ -1,6 +1,6 @@
 /// @description spawn
 
-player_walkSpeed = 16;
+player_walkSpeed = 10;
 player_vx = 0; 
 player_vy = 0;
 player_dir = 3;

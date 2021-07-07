@@ -50,3 +50,6 @@ if (player_vx != 0 || player_vy != 0) {
 	}
 }
 	
+	
+// depth sorting
+depth = -y;

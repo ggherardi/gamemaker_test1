@@ -28,8 +28,12 @@ if (player_vx == 0 && player_vy == 0) {
 
 // if moving
 if (player_vx != 0 || player_vy != 0) {
-	x += player_vx;
-	y -= player_vy;
+	if (!collision_point(x + player_vx, y, obj_par_environment, true, true)) {
+		x += player_vx;
+	}	
+	if (!collision_point(x, y - player_vy, obj_par_environment, true, true)) {
+		y -= player_vy;
+	}		
 	
 	// change walking sprite
 	if (player_vx > 0 || (player_vy != 0 && (sprite_index == spr_player_run_right || sprite_index == spr_player_idle_right))) {
